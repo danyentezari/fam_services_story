@@ -25,12 +25,12 @@ router.get('/', (req, res) => {
 
 router.post('/story-of-day', async (req, res) => {
 
-    const timeRequest = await axios.get('http://worldtimeapi.org/api/timezone/Africa/Lagos.json')
-    .then((response) => response)
-    .catch((error) => {
-        console.log('error', error)
-    })
-    .then((response) => response);
+    // const timeRequest = await axios.get('http://worldtimeapi.org/api/timezone/Africa/Lagos.json')
+    // .then((response) => response)
+    // .catch((error) => {
+    //     console.log('error', error)
+    // })
+    // .then((response) => response);
 
     // const calendar = makeCalendar(
     //     timeRequest.data.day_of_week,
@@ -39,10 +39,11 @@ router.post('/story-of-day', async (req, res) => {
 
     res.status(200).send({
         // calendar: calendar,
-        dayOfWeek: timeRequest.data.day_of_week,
-        dayOfMonth: new Date('2019-08-31T17:32:27.944196+00:00').getDate(),
-        currentDay: timeRequest.data.day_of_week,
-        story: stories[timeRequest.data.day_of_week]
+        // dayOfWeek: timeRequest.data.day_of_week,
+        // dayOfMonth: new Date('2019-08-31T17:32:27.944196+00:00').getDate(),
+        // currentDay: timeRequest.data.day_of_week,
+        // story: stories[timeRequest.data.day_of_week]
+        'test': 'true'
     });
     // const student = await StudentModel.findOne({ email: req.body.email })
     // .then(x=>x).catch(err=>console.log('err', err));
