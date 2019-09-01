@@ -18,6 +18,12 @@ const makeCalendar = (dayOfWeek, dayOfMonth) => {
 	calendar.shift();
     return calendar;
 }
+const calendar = {
+    34: [19,20,21,22,23,24,25],
+    35: [26,27,28,29,30,31,1],
+    36: [2,3,4,5,6,7,8],
+    37: [9,10,11,12,13,14,15],
+}
 
 router.get('/', (req, res) => {
     res.status(200).send("done")
@@ -32,29 +38,13 @@ router.post('/story-of-day', async (req, res) => {
     })
     .then((response) => response);
 
-    // const calendar = makeCalendar(
-    //     timeRequest.data.day_of_week,
-    //     parseInt(new Date('2019-08-31T17:32:27.944196+00:00').getDate())
-    // )
-
     res.status(200).send({
-        // calendar: calendar,
+        calendar: calendar[timeRequest.data.week_number],
         dayOfWeek: timeRequest.data.day_of_week,
-        dayOfMonth: new Date('2019-08-31T17:32:27.944196+00:00').getDate(),
+        dayOfMonth: new Date(timeRequest.data.utc_datetime).getDate(),
         currentDay: timeRequest.data.day_of_week,
         story: stories[timeRequest.data.day_of_week]
     });
-    // const student = await StudentModel.findOne({ email: req.body.email })
-    // .then(x=>x).catch(err=>console.log('err', err));
-
-    // if(student) {
-
-
-    // } else {
-    //     res.status(400).json({
-    //         msg: 'The email or password was incorrect'    
-    //     })
-    // }
 });
 
 

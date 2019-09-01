@@ -37,8 +37,8 @@ describe('server', ()=>{
 
             const res = await app.post('/story-of-day').send(); 
             expect(res.status).toEqual(200);
-            expect(res.body.calendar).toEqual([26,27,28,29,30,31,1])
-            expect(res.body.currentDay).toEqual(2)
+            expect(res.body.calendar).toEqual([19,20,21,22,23,24,25])
+            expect(res.body.currentDay).toEqual(6)
         });
     });  
 });
