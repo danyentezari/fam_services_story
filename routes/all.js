@@ -19,10 +19,42 @@ const makeCalendar = (dayOfWeek, dayOfMonth) => {
     return calendar;
 }
 const calendar = {
-    34: [19,20,21,22,23,24,25],
-    35: [26,27,28,29,30,31,1],
-    36: [2,3,4,5,6,7,8],
-    37: [9,10,11,12,13,14,15],
+    34: [
+        {dayNum:19,dayWeek:'Mon'},
+        {dayNum:20,dayWeek:'Tue'},
+        {dayNum:21,dayWeek:'Wed'},
+        {dayNum:22,dayWeek:'Thu'},
+        {dayNum:23,dayWeek:'Fri'},
+        {dayNum:24,dayWeek:'Sat'},
+        {dayNum:25,dayWeek:'Sun'}
+        ],
+    35: [
+        {dayNum:26,dayWeek:'Mon'},
+        {dayNum:27,dayWeek:'Tue'},
+        {dayNum:28,dayWeek:'Wed'},
+        {dayNum:29,dayWeek:'Thu'},
+        {dayNum:30,dayWeek:'Fri'},
+        {dayNum:31,dayWeek:'Sat'},
+        {dayNum:1,dayWeek:'Sun'}
+        ],
+    36: [
+        {dayNum:2,dayWeek:'Mon'},
+        {dayNum:3,dayWeek:'Tue'},
+        {dayNum:4,dayWeek:'Wed'},
+        {dayNum:5,dayWeek:'Thu'},
+        {dayNum:6,dayWeek:'Fri'},
+        {dayNum:7,dayWeek:'Sat'},
+        {dayNum:8,dayWeek:'Sun'}
+        ],
+    37: [
+        {dayNum:9,dayWeek:'Mon'},
+        {dayNum:10,dayWeek:'Tue'},
+        {dayNum:11,dayWeek:'Wed'},
+        {dayNum:12,dayWeek:'Thu'},
+        {dayNum:13,dayWeek:'Fri'},
+        {dayNum:14,dayWeek:'Sat'},
+        {dayNum:15,dayWeek:'Sun'}
+    ],
 }
 
 router.get('/', (req, res) => {
