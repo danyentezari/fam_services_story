@@ -3,7 +3,25 @@ const router = express.Router();
 const stories = require('../stories');
 const axios = require('axios');
 
-
+const capitals = {
+	'Nigeria': 'Lagos',
+	'Ghana': 'Accra',
+	'Algeria': 'Algiers',
+	'Guinea-Bissau': 'Bissau',
+	'Egypt': 'Cairo',
+	'Morocco': 'Casablanca',
+	'South Africa': 'Johannesburg',
+	'South Sudan': 'Juba',
+	'Sudan': 'Khartoum',
+	'Mozambique': 'Maputo',
+	'Liberia': 'Monrovia',
+	'Kenya': 'Nairobi',
+	'Chad': 'Ndjamena',
+	'São Tomé and Príncipe': 'Sao_Tome',
+	'Libya': 'Tripoli',
+	'Tunisia': 'Tunis',
+	'Namibia': 'Windhoek'
+}
 const makeCalendar = (dayOfWeek, dayOfMonth) => {
     let calendar = [];
     calendar[dayOfWeek] = dayOfMonth;
@@ -63,12 +81,32 @@ router.get('/', (req, res) => {
 
 router.post('/story-of-day', async (req, res) => {
 
-    const timeRequest = await axios.get('http://worldtimeapi.org/api/timezone/Africa/Lagos.json')
+    let timeRequest = await axios.get('http://worldtimeapi.org/api/timezone/Africa/Lagos.json')
     .then((response) => response)
     .catch((error) => {
         console.log('error', error)
     })
     .then((response) => response);
+
+    timeRequestX = { 
+        data: {
+            "week_number":35,
+            "utc_offset":"+01:00",
+            "utc_datetime":"2019-08-31T14:14:30.13988+00:00",
+            "unixtime":1566310470,
+            "timezone":"Africa/Lagos",
+            "raw_offset":3600,
+            "dst_until":null,
+            "dst_offset":0,
+            "dst_from":null,
+            "dst":false,
+            "day_of_year":232,
+            "day_of_week":6,
+            "datetime":"2019-08-31T14:14:30.13988+00:00",
+            "client_ip":"92.97.90.58",
+            "abbreviation":"WAT"
+        }
+    }
 
     res.status(200).send({
         calendar: calendar[timeRequest.data.week_number],
