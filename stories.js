@@ -27,6 +27,7 @@ const stories = [
     }
 ]
 
+
 for(let i = 1; i<31; i++) {
     stories.push({
         person: `Amina Slaoui`,
