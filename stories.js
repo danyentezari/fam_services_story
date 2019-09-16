@@ -1,4 +1,4 @@
-const description = "Dr. Stella Okoli a Nigerian pharmacist and entrepreneur has defied the odds in a predominantly male centric business space by building one of Nigeria’s leading indigenous pharmaceutical companies. She is the founder and current C.E.O of Emzor Pharmaceutical which she founded 3 decades ago, with footprints in India, Sierra Leone, Liberia, Ghana and Mali. Dr. Stella Okoli is a woman with a difference who has distinguished herself as a true daughter of Africa.";
+const description = "Amina Slaoui is the CEO of AMH Group founded in 1992 which has grown to become a leading social enterprise that provides social services, solutions and products for persons with disability in Morocco, reaching thousands of beneficiaries annually.";
 
 const stories = [
     {
@@ -29,9 +29,9 @@ const stories = [
 
 for(let i = 1; i<31; i++) {
     stories.push({
-        person: `Dr Stella Chinyelu Okoli`,
-        occupation: `Pharmacist & Entrepreneur`,
-        title: `Entreprenuership and Manufacturing`,
+        person: `Amina Slaoui`,
+        occupation: `Entrepreneur`,
+        title: `Social Entreprenuership`,
         storyID: `000${i}`,
         description: description,
         questions: [
