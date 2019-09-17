@@ -1,4 +1,4 @@
-const description = "Amina Slaoui is the CEO of AMH Group founded in 1992 which has grown to become a leading social enterprise that provides social services, solutions and products for persons with disability in Morocco, reaching thousands of beneficiaries annually.";
+const description = "Oke Maduewesi is the Chief Executive Officer of Zaron Cosmetics, an indigenous cosmetic company based in Nigeria. She holds a degree in Economics, from Edo State University, Ekpoma and a Master’s degree in Business Administration (MBA) from University of Leeds, United Kingdom. Oke is a firm believer in hard work and self-drive, which she has named as key values that helped her grow into the woman that she is today.";
 
 const stories = [
     {
@@ -29,9 +29,9 @@ const stories = [
 
 for(let i = 1; i<31; i++) {
     stories.push({
-        person: `Amina Slaoui`,
-        occupation: `Entrepreneur`,
-        title: `Social Entreprenuership`,
+        person: `Oke Maduewesi`,
+        occupation: `Chief Executive Officer`,
+        title: `Business Enterprise`,
         storyID: `000${i}`,
         description: description,
         questions: [
