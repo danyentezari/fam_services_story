@@ -1,4 +1,4 @@
-const description = "Oke Maduewesi is the Chief Executive Officer of Zaron Cosmetics, an indigenous cosmetic company based in Nigeria. She holds a degree in Economics, from Edo State University, Ekpoma and a Master’s degree in Business Administration (MBA) from University of Leeds, United Kingdom. Oke is a firm believer in hard work and self-drive, which she has named as key values that helped her grow into the woman that she is today.";
+const description = "Maud Chifamba, a self-schooled orphan in 2012, made history as the youngest person to secure admission into a university in Zimbabwe and Southern Africa as a whole at the age of 14. The academic whizz-kid, by her feat, secured nearly $10,000 in scholarship funding to cover her education expenses at the University of Zimbabwe due to her sterling performance at the Advance-Level examination. Maud repeated history again when she graduated as the youngest student from any university in Zimbabwe at the age of 18 with a Bachelor of Accounting Honors Degree in 2016.";
 
 const stories = [
     {
@@ -29,9 +29,9 @@ const stories = [
 
 for(let i = 1; i<31; i++) {
     stories.push({
-        person: `Oke Maduewesi`,
-        occupation: `Chief Executive Officer`,
-        title: `Business Enterprise`,
+        person: `Maud Chifamba`,
+        occupation: `Student`,
+        title: `Educational Milestone`,
         storyID: `000${i}`,
         description: description,
         questions: [
